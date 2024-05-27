@@ -1,0 +1,46 @@
+{
+  "name": "copydocument",
+  "displayName": "CopyDocument",
+  "description": "This Extension copies the whole text in the current opened window on VScode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand: copydocument.helloWorld",
+    "onCommand: copydocument.copyText"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "copydocument.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "copydocument.copyText",
+        "title": "Copy Document Text"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.89.0",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "clipboardy": "^4.0.0"
+  }
+}
